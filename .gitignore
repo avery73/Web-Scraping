@@ -1,0 +1,5 @@
+.venv/
+biblehub.py
+__pycache__/
+keys2.py
+requirements.txt
