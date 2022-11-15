@@ -41,7 +41,7 @@ for row in table_rows[1:6]:
     if change > 0:
         change_new = (100 + change) / 100
         pos = price / change_new
-        print(f"Corresponding Price: ${round(pos,5)}")
+        print(f"Corresponding Price: ${round(pos,2)}")
 
     if change < 0:
         change_new = (100 - abs(change)) / 100
