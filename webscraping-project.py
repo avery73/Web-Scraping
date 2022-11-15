@@ -24,7 +24,7 @@ myCellphone = '+12148018262'
 
 for row in table_rows[1:6]:
     td = row.findAll("td")
-    name = td[0].text.replace("Buy / Sell","").rstrip("\n")
+    name = td[0].text.replace("Buy / Sell","").rstrip("\n").lstrip(' ')
     print(name)
 
     sep = "\n"
@@ -36,7 +36,7 @@ for row in table_rows[1:6]:
 
     change = (td[2].text.replace("%",""))
     change = float(change)
-    print(f"Percent Change in 24 Hours {round(change,2)}%")
+    print(f"Percent Change in 24 Hours: {round(change,2)}%")
 
     if change > 0:
         change_new = (100 + change) / 100
